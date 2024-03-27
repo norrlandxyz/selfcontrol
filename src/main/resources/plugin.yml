@@ -1,0 +1,25 @@
+name: selfcontrol
+version: '${project.version}'
+main: xyz.norrland.selfcontrol.Selfcontrol
+api-version: '1.20'
+
+commands:
+  suicide:
+    description: "Kill yourself"
+    usage: "/suicide"
+    aliases: [kill, seppuku]
+    permission: selfcontrol.suicide
+    permission-message: "You do not have permission to kill yourself"
+  selfban:
+    description: "Ban yourself"
+    usage: "/selfban <hours>"
+    permission: selfcontrol.selfban
+    permission-message: "You do not have permission to ban yourself"
+
+permissions:
+  selfcontrol.suicide:
+    description: "Kill yourself"
+    default: true
+  selfcontrol.selfban:
+    description: "Ban yourself"
+    default: true
